@@ -47,3 +47,4 @@ test_script:
 
 artifacts:
     - path: '**\*.lib'
+    - path: '**\*.nupkg'
