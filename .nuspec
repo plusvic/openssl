@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>OpenSSL_1_1_0_stable</id>
+    <title>OpenSSL library</title>
+    <version>1.1.0</version>
+    <authors></authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package with OpenSSL static library</description>
+  </metadata>
+  <files>
+    <file src="_build\*.lib" target="lib\" />
+    <file src="include\openssl\*.h" target="include\openssl\" />
+  </files>
+</package>
