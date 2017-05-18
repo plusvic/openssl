@@ -1,3 +1,5 @@
+clone_depth: 3
+
 platform:
     - x86
     - x64
@@ -8,7 +10,6 @@ environment:
 
 configuration:
     - plain
-    - shared
 
 before_build:
     - ps: >-
@@ -43,3 +44,6 @@ test_script:
     - mkdir ..\_install
     - nmake install install_docs DESTDIR=..\_install
     - cd ..
+
+artifacts:
+    - path: '**\*.lib'
