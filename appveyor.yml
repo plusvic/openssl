@@ -3,10 +3,10 @@ clone_depth: 3
 nuget:
   account_feed: false
   project_feed: true
-  disable_publish_on_pr: false 
+  disable_publish_on_pr: false
 
 build:
-  publish_nuget: true 
+  publish_nuget: true
 
 platform:
     - x86
@@ -46,6 +46,9 @@ build_script:
     - nmake
     - cd ..
 
+after_build:
+    - nuget pack openssl.nuspec
+
 test_script:
     - cd _build
     - nmake test
@@ -55,4 +58,4 @@ test_script:
 
 artifacts:
     - path: '**\*.lib'
-    - path: '**\*.nupkg'
+    - path: '*.nupkg'

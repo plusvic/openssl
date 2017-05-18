@@ -4,7 +4,7 @@
     <id>OpenSSL_1_1_0_stable</id>
     <title>OpenSSL library</title>
     <version>1.1.0</version>
-    <authors></authors>
+    <authors>The OpenSSL Project</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Package with OpenSSL static library</description>
   </metadata>
