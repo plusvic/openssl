@@ -46,15 +46,15 @@ build_script:
     - nmake
     - cd ..
 
-after_build:
-    - nuget pack openssl.nuspec
-
 test_script:
     - cd _build
     - nmake test
     - mkdir ..\_install
     - nmake install install_docs DESTDIR=..\_install
     - cd ..
+
+after_test:
+    - nuget pack openssl.nuspec
 
 artifacts:
     - path: '**\*.lib'
