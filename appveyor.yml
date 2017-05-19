@@ -54,7 +54,7 @@ test_script:
     - cd ..
 
 after_test:
-    - nuget pack openssl-%Platform%
+    - nuget pack openssl-%PLATFORM%
 
 artifacts:
     - path: '**\*.lib'
