@@ -9,7 +9,8 @@
     <description>Package with OpenSSL static library</description>
   </metadata>
   <files>
-    <file src="_build\*.lib" target="lib\" />
-    <file src="include\openssl\*.h" target="include\openssl\" />
+    <file src="_install\Program Files (x86)\OpenSSL\lib\*.*" target="lib\" />
+    <file src="_install\Program Files (x86)\OpenSSL\include\*.*" target="include\" />
+    <file src="_install\Program Files (x86)\OpenSSL\include\openssl\*.*" target="include\openssl\" />
   </files>
 </package>
