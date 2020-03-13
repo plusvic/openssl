@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>YARA.OpenSSL.x86</id>
+    <title>OpenSSL library for YARA</title>
+    <version>1.1.1</version>
+    <authors>The OpenSSL Project</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package with OpenSSL static library</description>
+  </metadata>
+  <files>
+    <file src="_install\Program Files (x86)\OpenSSL\lib\*.*" target="lib\" />
+    <file src="_install\Program Files (x86)\OpenSSL\include\*.*" target="include\" />
+    <file src="_install\Program Files (x86)\OpenSSL\include\openssl\*.*" target="include\openssl\" />
+  </files>
+</package>

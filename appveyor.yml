@@ -11,9 +11,16 @@ environment:
         - VSVER: 15
 
 configuration:
-    - shared
     - plain
-    - minimal
+
+nuget:
+    account_feed: false
+    project_feed: true
+    disable_publish_on_pr: false
+
+build:
+    publish_nuget: true
+
 
 before_build:
     - ps: >-
@@ -75,3 +82,12 @@ test_script:
             cmd /c "nmake install DESTDIR=..\_install 2>&1"
         }
     - cd ..
+
+
+after_test:
+    - nuget pack openssl-%PLATFORM%.nuspec
+
+    
+artifacts:
+    - path: '**\*.lib'
+    - path: '*.nupkg'
