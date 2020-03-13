@@ -1,3 +1,5 @@
+clone_depth: 3
+
 image:
   - Visual Studio 2017
 
@@ -87,7 +89,7 @@ test_script:
 after_test:
     - nuget pack openssl-%PLATFORM%.nuspec
 
-    
+
 artifacts:
     - path: '**\*.lib'
     - path: '*.nupkg'
